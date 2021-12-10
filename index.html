@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To Do List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+  <body>
+    <main>
+      <div class="todo-container">
+        <section id="todo-heading">
+          To Do List
+        </section>
+
+        <div class="form-control">
+          <input class="todo-input" type="text" name="toDoItemInput" placeholder="Enter the to do list item">
+          <input class="todo-submit" onclick="getTodoListItem()" type="submit" name="submit-button" value="Submit">
+        </div>
+
+        <section id="display-container">
+          <div class="display-items">
+            <div class="display-items-heading">
+              Things to do
+            </div>
+            <section id="display-item">
+            </section>
+          </div>
+          <div class="display-done-items">
+            <div class="display-done-items-heading">
+              Things done
+            </div>
+            <section id="display-done-item">
+            </section>
+          </div>
+        </section>
+
+        <template id="display-item-template">
+          <div class="display-item-parent">
+            <div class="display-item-container">
+              <div class="display-item-text">
+              </div>
+              <input class="display-item-done-button" onclick="removeTodoListItem(this)" type="submit" name="done-button" value="Done">
+            </div>
+          </div>
+        </template>
+
+        <template id="display-done-item-template">
+          <div class="display-done-item-parent">
+            <div class="display-done-item-container">
+              <div class="display-done-item-text">
+              </div>
+            </div>
+          </div>
+        </template>
+
+      </div>
+    </main>
+
+    <script type="text/javascript" src="index.js">
+    </script>
+
+  </body>
+</html>
